@@ -1,0 +1,9 @@
+main: me.ian.myEssentials
+name: myEssentials
+author: Ian
+version: 1.0.0
+api-version: 1.20
+description: My version of the Essentials plugin.
+commands:
+  menu:
+    description: Opens the menu.
