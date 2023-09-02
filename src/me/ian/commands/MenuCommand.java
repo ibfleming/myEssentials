@@ -24,7 +24,7 @@ public class MenuCommand implements CommandExecutor {
 
         /* ---------- Creating Inventory ---------- */
         Player p = (Player) sender;
-        Inventory inv = Bukkit.createInventory(p, 9, ChatColor.DARK_GREEN + "Menu");
+        Inventory inv = Bukkit.createInventory(p, 9, ChatColor.DARK_GREEN + "Test Menu");
 
         /* ---------- Adding Items to Inventory ---------- */
 
@@ -65,7 +65,7 @@ public class MenuCommand implements CommandExecutor {
         inv.setItem(2, button3);
 
         // Button 4 (Exit)
-        ItemStack buttonExit = new ItemStack(Material.RED_CONCRETE, 1);
+        ItemStack buttonExit = new ItemStack(Material.BARRIER, 1);
         ItemMeta buttonExitMeta = buttonExit.getItemMeta();
 
         buttonExitMeta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Exit");

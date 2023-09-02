@@ -1,6 +1,7 @@
 package me.ian;
 
 import me.ian.commands.MenuCommand;
+import me.ian.listeners.InteractionListener;
 import me.ian.listeners.JoinLeaveListener;
 import me.ian.listeners.MenuListener;
 import org.bukkit.Bukkit;
@@ -24,6 +25,7 @@ public class myEssentials extends JavaPlugin implements Listener {
         getCommand("menu").setExecutor(new MenuCommand());
         getServer().getPluginManager().registerEvents(new MenuListener(), plugin);
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), plugin);
+        //getServer().getPluginManager().registerEvents(new InteractionListener(), plugin);
 
         System.out.println(ConsoleColors.GREEN + this.getName() + " enabled." + ConsoleColors.RESET);
     }

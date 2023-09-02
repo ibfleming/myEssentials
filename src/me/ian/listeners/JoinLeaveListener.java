@@ -34,7 +34,7 @@ public class JoinLeaveListener implements Listener {
     }
 
     public ItemStack createItemMenu() {
-        ItemStack menu = new ItemStack(Material.WRITABLE_BOOK);
+        ItemStack menu = new ItemStack(Material.BOOK);
         ItemMeta menuMeta = menu.getItemMeta();
         menuMeta.setDisplayName(ChatColor.YELLOW + "" + ChatColor.BOLD + "Open Menu");
         ArrayList<String> menuLore = new ArrayList<>();
