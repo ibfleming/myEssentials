@@ -6,4 +6,6 @@ api-version: 1.20
 description: My version of the Essentials plugin.
 commands:
   menu:
-    description: Opens the menu.
+      description: Opens the test menu.
+  heal:
+      description: Heal thyself.

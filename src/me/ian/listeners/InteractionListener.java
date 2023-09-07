@@ -1,5 +1,7 @@
 package me.ian.listeners;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +16,9 @@ public class InteractionListener implements Listener {
         if( e.getAction() != null && (e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK))) {
             ItemStack item = e.getItem();
             if( item != null && !(item.getType().equals(Material.AIR))) {
-                System.out.println("RIGHT CLICK EVENT REGISTERED!");
+                if( ChatColor.stripColor(item.getItemMeta().getDisplayName()).equals("Open Menu") ) {
+                    Bukkit.getServer().dispatchCommand(e.getPlayer(), "menu");
+                }
             }
         }
     }

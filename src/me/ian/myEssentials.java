@@ -1,5 +1,6 @@
 package me.ian;
 
+import me.ian.commands.HealCommand;
 import me.ian.commands.MenuCommand;
 import me.ian.listeners.InteractionListener;
 import me.ian.listeners.JoinLeaveListener;
@@ -23,9 +24,10 @@ public class myEssentials extends JavaPlugin implements Listener {
         plugin = this;
 
         getCommand("menu").setExecutor(new MenuCommand());
+        getCommand("heal").setExecutor(new HealCommand());
         getServer().getPluginManager().registerEvents(new MenuListener(), plugin);
         getServer().getPluginManager().registerEvents(new JoinLeaveListener(), plugin);
-        //getServer().getPluginManager().registerEvents(new InteractionListener(), plugin);
+        getServer().getPluginManager().registerEvents(new InteractionListener(), plugin);
 
         System.out.println(ConsoleColors.GREEN + this.getName() + " enabled." + ConsoleColors.RESET);
     }

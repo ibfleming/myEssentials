@@ -2,6 +2,7 @@ package me.ian.listeners;
 
 import me.ian.myEssentials;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,11 +21,11 @@ public class JoinLeaveListener implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         ItemStack menu_item = createItemMenu();
         Player player = e.getPlayer();
-        Inventory inv = player.getInventory();
-
-        inv.clear();
-        inv.setItem(0, menu_item);
-
+        if( player.getGameMode() == GameMode.SURVIVAL ) {
+            Inventory inv = player.getInventory();
+            inv.clear();
+            inv.setItem(0, menu_item);
+        }
         e.setJoinMessage(ChatColor.GREEN + player.getName() + " has joined...");
     }
 
