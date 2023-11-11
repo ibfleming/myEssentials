@@ -1,5 +1,6 @@
 package me.ian;
 
+import me.ian.builder.ItemBuilder;
 import me.ian.commands.HealCommand;
 import me.ian.commands.MenuCommand;
 import me.ian.listeners.InteractionListener;

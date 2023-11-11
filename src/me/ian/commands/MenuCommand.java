@@ -1,6 +1,7 @@
 package me.ian.commands;
 
 import me.ian.ConsoleColors;
+import me.ian.builder.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
@@ -8,6 +9,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -31,6 +33,7 @@ public class MenuCommand implements CommandExecutor {
             /* ---------- Adding Items to Inventory ---------- */
 
             // Button 1
+            /*
             ItemStack button1 = new ItemStack(Material.LIGHT_BLUE_CONCRETE, 1);
             ItemMeta button1Meta = button1.getItemMeta();
 
@@ -40,6 +43,14 @@ public class MenuCommand implements CommandExecutor {
 
             button1Meta.setLore(button1Lore);
             button1.setItemMeta(button1Meta);
+            */
+
+            ItemStack button1 = new ItemBuilder(Material.LIGHT_BLUE_CONCRETE)
+                    .amount(1)
+                    .name(ChatColor.GRAY + "" + ChatColor.ITALIC + "Button 1")
+                    .lore(ChatColor.RESET + "" + ChatColor.WHITE + "Button 1 Info")
+                    .create();
+
             inv.setItem(0, button1);
 
             // Button 2
