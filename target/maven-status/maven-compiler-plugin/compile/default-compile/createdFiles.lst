@@ -1,5 +1,12 @@
-me\ian\myessentials\MainMenu$HealMenu.class
+me\ian\myessentials\menus\MainMenu.class
+me\ian\myessentials\menus\MainMenu$FlyMenu.class
+me\ian\myessentials\commands\DebugCommand.class
+me\ian\myessentials\menus\NexusMenu$4.class
+me\ian\myessentials\menus\NexusMenu$3.class
+me\ian\myessentials\utils\ConsoleColors.class
+me\ian\myessentials\menus\NexusMenu.class
+me\ian\myessentials\menus\MainMenu$HealMenu.class
+me\ian\myessentials\menus\NexusMenu$2.class
 me\ian\myessentials\MyEssentials.class
-me\ian\myessentials\MainMenu.class
-me\ian\myessentials\MainMenu$FlyMenu.class
-me\ian\myessentials\MainMenu$ArmorMenu.class
+me\ian\myessentials\menus\MainMenu$ArmorMenu.class
+me\ian\myessentials\menus\NexusMenu$1.class

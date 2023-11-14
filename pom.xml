@@ -55,7 +55,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <outputDirectory>C:/Users/Administrator/Documents/Development/Servers/paper-server/plugins</outputDirectory>
+                    <outputDirectory>C:/Users/IanLAPTOP/Documents/Development/Servers/paper-server/plugins</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>

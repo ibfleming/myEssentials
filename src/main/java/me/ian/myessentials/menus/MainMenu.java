@@ -1,6 +1,7 @@
-package me.ian.myessentials;
+package me.ian.myessentials.menus;
 
 import org.mineacademy.fo.menu.Menu;
+import org.mineacademy.fo.menu.MenuContainer;
 import org.mineacademy.fo.menu.button.Button;
 import org.mineacademy.fo.menu.button.ButtonMenu;
 import org.mineacademy.fo.menu.button.StartPosition;

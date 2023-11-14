@@ -1,12 +1,13 @@
 package me.ian.myessentials;
 
+import me.ian.myessentials.utils.ConsoleColors;
 import org.mineacademy.fo.plugin.SimplePlugin;
 
 public final class MyEssentials extends SimplePlugin {
 
     @Override
     protected void onPluginStart() {
-        getLogger().info("Hello, World!");
+        getLogger().info(ConsoleColors.GREEN + this.getName() + " loaded." + ConsoleColors.RESET);
     }
 
     @Override
