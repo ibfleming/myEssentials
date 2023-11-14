@@ -3,7 +3,6 @@ package me.ian.myessentials;
 import org.mineacademy.fo.menu.Menu;
 import org.mineacademy.fo.menu.button.Button;
 import org.mineacademy.fo.menu.button.ButtonMenu;
-import org.mineacademy.fo.menu.button.ButtonRemove;
 import org.mineacademy.fo.menu.button.StartPosition;
 import org.mineacademy.fo.menu.button.annotation.Position;
 import org.mineacademy.fo.remain.CompMaterial;
