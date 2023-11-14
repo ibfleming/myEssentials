@@ -1,0 +1,7 @@
+name: MyEssentials
+version: '1.0-dev'
+main: me.ian.myessentials.MyEssentials
+api-version: '1.20'
+prefix: Ian
+authors: [Ian Fleming]
+description: First Paper plugin.
