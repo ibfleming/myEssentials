@@ -7,7 +7,10 @@ public final class MyEssentials extends SimplePlugin {
 
     @Override
     protected void onPluginStart() {
-        getLogger().info(ConsoleColors.GREEN + this.getName() + " loaded." + ConsoleColors.RESET);
+        getLogger().info(ConsoleColors.GREEN_BOLD + this.getName() + " initialized!" + ConsoleColors.RESET);
+        getLogger().info(ConsoleColors.WHITE_BOLD + "Loading modules..." + ConsoleColors.RESET);
+        EconomyManager economyManager = new EconomyManager();
+        getLogger().info(ConsoleColors.WHITE_BOLD + "Modules loaded!" + ConsoleColors.RESET);
     }
 
     @Override
@@ -33,5 +36,7 @@ public final class MyEssentials extends SimplePlugin {
     public static MyEssentials getInstance() {
         return (MyEssentials) SimplePlugin.getInstance();
     }
+
+
 
 }

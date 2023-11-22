@@ -7,7 +7,7 @@
     <groupId>me.ian</groupId>
     <artifactId>MyEssentials</artifactId>
     <name>MyEssentials</name>
-    <version>1.0-dev</version>
+    <version>DEV</version>
     <packaging>jar</packaging>
     <description>First Paper plugin.</description>
 
@@ -55,7 +55,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <outputDirectory>C:/Users/IanLAPTOP/Documents/Development/Servers/paper-server/plugins</outputDirectory>
+                    <outputDirectory>C:/Users/Administrator/Documents/Development/Servers/paper-server/plugins</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
