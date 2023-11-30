@@ -1,16 +1,35 @@
 package me.ian.myessentials;
 
+import lombok.Getter;
+import me.ian.myessentials.commands.ButterflyCommand;
+import me.ian.myessentials.models.Scheduler;
+import me.ian.myessentials.tasks.ButterflyTask;
 import me.ian.myessentials.utils.ConsoleColors;
 import org.mineacademy.fo.plugin.SimplePlugin;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 public final class MyEssentials extends SimplePlugin {
+
+    @Getter
+    private static final Map<UUID, String> playerTags = new HashMap<>();
+
+    private Scheduler.Task particleTask;
 
     @Override
     protected void onPluginStart() {
-        getLogger().info(ConsoleColors.GREEN_BOLD + this.getName() + " initialized!" + ConsoleColors.RESET);
+
+        registerEvents(new BasicListeners());
+        registerCommand(new ButterflyCommand());
+
+        getLogger().info(ConsoleColors.GREEN_BOLD + this.getName() + " enabled." + ConsoleColors.RESET);
         getLogger().info(ConsoleColors.WHITE_BOLD + "Loading modules..." + ConsoleColors.RESET);
         EconomyManager economyManager = new EconomyManager();
-        getLogger().info(ConsoleColors.WHITE_BOLD + "Modules loaded!" + ConsoleColors.RESET);
+        getLogger().info(ConsoleColors.WHITE_BOLD + "Modules enabled." + ConsoleColors.RESET);
+
+        particleTask = Scheduler.runTimer(ButterflyTask.getInstance(), 0, 1);
     }
 
     @Override
@@ -33,10 +52,17 @@ public final class MyEssentials extends SimplePlugin {
         // YourDatabase.getInstance().close();
     }
 
+    @Override
+    protected void onPluginStop() {
+        // Plugin Stop/Close
+
+        if( particleTask != null ) {
+            particleTask.cancel();
+        }
+    }
+
     public static MyEssentials getInstance() {
         return (MyEssentials) SimplePlugin.getInstance();
     }
-
-
 
 }

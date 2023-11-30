@@ -7,13 +7,13 @@ import me.ian.myessentials.utils.ConsoleColors;
 public class EconomyManager {
 
     private static EconomyManager instance;
-    public static final String name = "MyEconomyManager";
+    public static final String name = "Economy Manager";
 
     private double globalAmount;
 
     EconomyManager() {
         globalAmount = 0.0;
-        MyEssentials.getInstance().getLogger().info(ConsoleColors.WHITE + "    - " + ConsoleColors.WHITE_UNDERLINED + name + ConsoleColors.RESET);
+        MyEssentials.getInstance().getLogger().info(ConsoleColors.WHITE + "    ✔️ " + ConsoleColors.WHITE_UNDERLINED + name + ConsoleColors.RESET);
     }
 
     public static EconomyManager getInstance() {
@@ -37,5 +37,4 @@ public class EconomyManager {
             this.globalAmount = 0;
         }
     }
-
 }

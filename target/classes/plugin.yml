@@ -1,7 +1,6 @@
 name: MyEssentials
-version: 'DEV'
+version: 1.0
 main: me.ian.myessentials.MyEssentials
-api-version: '1.20'
-prefix: Ian
-authors: [Ian Fleming]
-description: First Paper plugin.
+author: Ian Fleming
+api-version: 1.13
+softdepend: [AuthMe, BanManager, BungeeChatAPI, CMI, DiscordSRV, Factions, Feudal, ItemsAdder, Essentials, LegacyFactions, Lands, LuckPerms, Multiverse-Core, MVdWPlaceholderAPI, MythicMobs, mcMMO, Nicky, PlaceholderAPI, ProtocolLib, SimpleClans, Towny, TownyChat, Vault, WorldEdit]

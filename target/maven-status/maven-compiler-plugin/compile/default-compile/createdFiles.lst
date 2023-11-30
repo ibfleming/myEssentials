@@ -1,4 +1,9 @@
+me\ian\myessentials\BasicListeners.class
+me\ian\myessentials\commands\ButterflyCommand.class
+me\ian\myessentials\models\Scheduler$Task.class
+me\ian\myessentials\EconomyManager.class
 me\ian\myessentials\PlayerEconomy.class
 me\ian\myessentials\MyEssentials.class
-me\ian\myessentials\EconomyManager.class
+me\ian\myessentials\tasks\ButterflyTask.class
+me\ian\myessentials\models\Scheduler.class
 me\ian\myessentials\utils\ConsoleColors.class

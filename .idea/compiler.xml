@@ -10,5 +10,8 @@
         <module name="MyEssentials" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myessentials" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
