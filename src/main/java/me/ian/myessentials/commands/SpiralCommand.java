@@ -2,19 +2,20 @@ package me.ian.myessentials.commands;
 
 
 import me.ian.myessentials.tasks.ButterflyTask;
+import me.ian.myessentials.tasks.SpiralTask;
 import org.bukkit.entity.Player;
 import org.mineacademy.fo.command.SimpleCommand;
 
-public final class ButterflyCommand extends SimpleCommand {
+public final class SpiralCommand extends SimpleCommand {
 
-    public ButterflyCommand() {
-        super("butterfly");
+    public SpiralCommand() {
+        super("spiral");
     }
 
     @Override
     protected void onCommand() {
         Player player = (Player) sender;
-        ButterflyTask instance = ButterflyTask.getInstance();
+        SpiralTask instance = SpiralTask.getInstance();
 
         if (instance.hasPlayer(player.getUniqueId())) {
             instance.removePlayer(player.getUniqueId());

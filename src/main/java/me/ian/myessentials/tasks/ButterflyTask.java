@@ -17,7 +17,7 @@ public final class ButterflyTask implements Runnable {
     @Getter
     private static final ButterflyTask instance = new ButterflyTask();
 
-    private final Set<UUID> viewingWings = new HashSet<>();
+    private final Set<UUID> viewers = new HashSet<>();
 
     private ButterflyTask() {
     }
@@ -32,7 +32,7 @@ public final class ButterflyTask implements Runnable {
     private void generateButterflyWingEffect(Player player) {
         Location location = player.getLocation();
 
-        location.add(location.getDirection().normalize().multiply(-0.3)); // Move behind the player
+        location.add(location.getDirection().normalize().multiply(-0.5)); // Move behind the player
         location.add(0, 0.85, 0); // Push down to the chest
         location.setPitch(0F); // Stop vertical rotation
 
@@ -54,7 +54,7 @@ public final class ButterflyTask implements Runnable {
             rotateAroundAxisY(particleLocation, location.getYaw());
 
             try {
-                Particle.DustOptions dust = new Particle.DustOptions(Color.fromRGB(212, 146, 53), 0.6F);
+                Particle.DustOptions dust = new Particle.DustOptions(Color.fromRGB(255, 255, 255), 0.6F);
                 player.getWorld().spawnParticle(Particle.REDSTONE, location.clone().add(particleLocation), 0, dust);
 
             } catch (Throwable t) {
@@ -87,14 +87,14 @@ public final class ButterflyTask implements Runnable {
     }
 
     public void addPlayer(UUID uuid) {
-        viewingWings.add(uuid);
+        viewers.add(uuid);
     }
 
     public void removePlayer(UUID uuid) {
-        viewingWings.remove(uuid);
+        viewers.remove(uuid);
     }
 
     public boolean hasPlayer(UUID uuid) {
-        return viewingWings.contains(uuid);
+        return viewers.contains(uuid);
     }
 }
